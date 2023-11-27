@@ -3,8 +3,8 @@ from contextlib import contextmanager
 from sqlmodel import Session, SQLModel, create_engine
 
 # CONFIGURAÇÕES DA CONEXAO COM O BANCO DE DADOS
-PG_USERNAME = "root"
-PG_PASSWORD = "postgres"
+PG_USERNAME = "Carli"
+PG_PASSWORD = "12345"
 PG_HOST = "localhost"
 PG_PORT = 54323
 PG_DATABASE = "airline_db"

@@ -33,7 +33,7 @@ def cria_voo(voo: Voo):
 
 @voos_router.get("/vendas")
 def lista_voos_venda():
-    LIMITE_HORAS = 3
+    LIMITE_HORAS = 2
     with get_session() as session:
         hora_limite = datetime.now() + timedelta(hours=LIMITE_HORAS)
         statement = select(Voo).where(Voo.data_saida >= hora_limite)
@@ -47,5 +47,3 @@ def lista_voos():
         statement = select(Voo)
         voo = session.exec(statement).all()
         return voo
-
-# TODO - Implementar rota que retorne as poltronas por id do voo
